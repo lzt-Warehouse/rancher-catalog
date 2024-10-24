@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: lzt102010  # MySQL root 用户密码
+      MYSQL_DATABASE: wsytest  # 默认数据库
+    volumes:
+      - mysql_data:/var/lib/mysql  # 挂载 MySQL 数据卷
+    ports:
+      - "3306:3306"  # 映射 MySQL 端口
