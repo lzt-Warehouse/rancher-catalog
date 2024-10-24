@@ -4,4 +4,4 @@ templates:
     name: "MySQL"
     description: "MySQL database service"
     versionLinks:
-      1.0.0: templates/mysql/0
+      0: templates/mysql/0
