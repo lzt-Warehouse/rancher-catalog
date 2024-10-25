@@ -1,7 +1,7 @@
 version: '2'
 templates:
-  php-mysql-redis-mq:
-    name: PHP MySQL Redis MQ Stack
+  mysql:
+    name: MySQL Stack
     description: A stack that includes PHP, MySQL, Redis, and MQ services.
     versionLinks:
       1.0.0: templates/mysql/0
