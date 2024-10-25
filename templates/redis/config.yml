@@ -1,0 +1,7 @@
+version: "2"
+templates:
+  redis:
+    name: Redis Service
+    description: A Redis service template with custom configuration.
+    versionLinks:
+      "1.0.0": "rancher-catalog/templates/redis/0"
