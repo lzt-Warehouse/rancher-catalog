@@ -1,29 +1,4 @@
 version: '2'
 services:
-  php:
-    image: php:7.4-fpm
-
-
-environment:
-      - PHP_ENV=development
-    volumes:
-      - ./code:/var/www/html
-    links:
-      - mysql
-      - redis
-
   mysql:
     image: mysql:5.7
-    environment:
-      - MYSQL_ROOT_PASSWORD=root_password
-    volumes:
-      - ./data/mysql:/var/lib/mysql
-
-  redis:
-    image: redis:alpine
-
-  mq:
-    image: rabbitmq:management
-    ports:
-      - "15672:15672"  # RabbitMQ管理界面端口
-      - "5672:5672"    # RabbitMQ服务端口
