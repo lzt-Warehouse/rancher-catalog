@@ -1,5 +1,4 @@
-# 模板信息
-name: MySQL Service
-version: 1.0.0
-description: A scalable MySQL service template.
-category: Database
+version: '2'
+questions:
+  - variable: mysql_root_password
+    label: "MySQL Root Password"

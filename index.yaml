@@ -1,7 +1,0 @@
-version: '2'
-templates:
-  mysql:
-    name: "MySQL"
-    description: "MySQL database service"
-    versionLinks:
-      1.0.0: templates/mysql/0
