@@ -2,6 +2,3 @@ version: '2'
 services:
   mysql:
     scale: 1
-    upgrade_strategy:
-      start_first: true
-
