@@ -3,8 +3,14 @@ services:
   mysql:
     image: mysql:5.7
     environment:
-      MYSQL_ROOT_PASSWORD: yourpassword
+      MYSQL_ROOT_PASSWORD: wsy123456    # 设置 MySQL 根用户密码
+      MYSQL_DATABASE: wsy         # 创建一个初始数据库
+      MYSQL_USER: lzt                 # 设置一个普通用户
+      MYSQL_PASSWORD: lzt123456     # 普通用户密码
+    ports:
+      - "3306:3306"                      # 将 MySQL 服务端口映射到主机
     volumes:
-      - mysql_data:/var/lib/mysql
+      - mysql_data:/var/lib/mysql         # 数据卷用于持久化数据库数据
+    restart: unless-stopped               # 设置容器在失败时重启
 volumes:
   mysql_data:

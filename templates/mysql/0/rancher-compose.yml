@@ -1,6 +1,13 @@
 version: '2'
 services:
   mysql:
-    scale: 1
+    scale: 1                             # 设置服务实例的数量，通常为 1
     upgrade_strategy:
-      start_first: true
+      start_first: true                   # 在更新时，先启动新容器再关闭旧容器
+    health_check:
+      port: 3306                          # 进行健康检查的端口
+      interval: 2000                      # 检查间隔（2 秒）
+      timeout: 2000                       # 超时时间（2 秒）
+      unhealthy_threshold: 3              # 失败次数超过 3 次时认为服务不可用
+      strategy: recreate                  # 在升级时重新创建容器
+

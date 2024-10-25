@@ -1,6 +1,5 @@
-name: mysql
-description: |
-  mysql service
-version: mysql:5.7
-category: System
-
+# 模板信息
+name: MySQL Service
+version: 1.0.0
+description: A scalable MySQL service template.
+category: Database
