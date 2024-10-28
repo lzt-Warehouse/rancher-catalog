@@ -1,0 +1,9 @@
+mysql_lb_port=3306
+mysql_root_password=
+mysql_image=mysql\:latest
+mysql_database=
+mysql_user=
+mysql_password=
+mysql_allow_empty_password=no
+mysql_random_root_password=no
+mysql_onetime_password=no
