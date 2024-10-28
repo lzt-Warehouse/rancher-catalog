@@ -1,4 +1,10 @@
-catalog:
-  name: "MySQL Template"
-  version: "1.0.0"
-  description: "A MySQL template for deploying MySQL on Rancher."
+version: "2"
+services:
+  mysql:
+    scale: 1
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: "root_password"
+      MYSQL_DATABASE: "my_database"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "user_password"
