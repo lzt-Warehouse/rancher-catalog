@@ -1,7 +1,7 @@
-name: Kubernetes
+name: Kubernetes111
 description: Default Kubernetes template
 stacks:
-  - name: kubernetes
+  - name: kubernetes111
     templateId: 'library:infra*k8s'
   - name: network-services
     templateId: 'library:infra*network-services'
