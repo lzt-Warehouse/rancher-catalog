@@ -1,4 +1,0 @@
-version: '2'
-questions:
-  - variable: mysql_root_password
-    label: "MySQL Root Password"
