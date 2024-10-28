@@ -1,5 +1,25 @@
-version: '2'
-name: mysql
-description: |
-  A script to pull images for a specific Rancher version
-
+catalog:
+  name: "MySQL Template"
+  version: "1.0.0"
+  description: "A MySQL template for deploying MySQL on Rancher."
+  questions:
+    - variable: "MYSQL_ROOT_PASSWORD"
+      label: "Root Password"
+      description: "Set the MySQL root password"
+      type: "string"
+      required: true
+    - variable: "MYSQL_DATABASE"
+      label: "Database Name"
+      description: "Set the MySQL database name"
+      default: "example_db"
+      type: "string"
+    - variable: "MYSQL_USER"
+      label: "Database User"
+      description: "Set the MySQL database user"
+      default: "user"
+      type: "string"
+    - variable: "MYSQL_PASSWORD"
+      label: "User Password"
+      description: "Set the password for the database user"
+      type: "string"
+      required: true
