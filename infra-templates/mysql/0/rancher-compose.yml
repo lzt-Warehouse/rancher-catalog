@@ -1,4 +1,6 @@
 version: '2'
+catalog:
+  name: mysql
 services:
-  mysql:
-    scale: 1
+  pre-pull-images:
+    start_on_create: true

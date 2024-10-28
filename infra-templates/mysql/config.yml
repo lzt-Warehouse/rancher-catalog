@@ -1,4 +1,5 @@
 version: '2'
-questions:
-  - variable: mysql_root_password
-    label: "MySQL Root Password"
+name: mysql
+description: |
+  A script to pull images for a specific Rancher version
+
