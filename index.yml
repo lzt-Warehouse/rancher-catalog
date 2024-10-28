@@ -1,7 +1,0 @@
-version: '2'
-templates:
-  mysql:
-    name: MySQL Stack
-    description: A stack that includes PHP, MySQL, Redis, and MQ services.
-    versionLinks:
-      1.0.0: infra-templates/mysql/0

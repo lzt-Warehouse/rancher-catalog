@@ -1,4 +1,0 @@
-catalog:
-  name: "MySQL Template"
-  version: "1.0.0"
-  description: "A MySQL template for deploying MySQL on Rancher."
