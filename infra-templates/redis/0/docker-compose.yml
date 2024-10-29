@@ -4,3 +4,9 @@ services:
     image: redis:latest
     ports:
       - "6379:6379"
+    volumes:
+      - redis_data:/data
+    environment:
+      - REDIS_PASSWORD=your_redis_password  # 可选：为 Redis 设置密码
+    command: ["redis-server", "--requirepass", "your_redis_password"]  # 可选：启动命令设置密码
+

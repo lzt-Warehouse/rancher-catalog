@@ -1,6 +1,6 @@
 version: '2'
-services:
-  redis:
-    scale: 1
-    upgrade_strategy:
-      start_first: true
+questions:
+  - variable: redis_password
+    label: "Redis Password"
+    required: true
+    default: "your_redis_password"
