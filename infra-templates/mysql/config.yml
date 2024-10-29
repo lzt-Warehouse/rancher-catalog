@@ -1,5 +1,3 @@
-version: '2'
 name: mysql
-questions:
-  - variable: mysql_root_password
-    label: "MySQL Root Password"
+version: 1.0.0
+description: MySQL Database Service
