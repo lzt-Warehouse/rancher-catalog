@@ -1,4 +1,5 @@
 version: '2'
+name: mysql
 questions:
   - variable: mysql_root_password
     label: "MySQL Root Password"
