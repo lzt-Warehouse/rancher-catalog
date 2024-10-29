@@ -1,15 +1,6 @@
-version: '2'
+sversion: '2'
 services:
   php:
     image: php:7.4-apache
     ports:
       - "80:80"
-    volumes:
-      - ./www:/var/www/html
-    environment:
-      - MYSQL_HOST=mysql
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=rootpassword
-    restart: always
-    labels:
-      io.rancher.container.pull_image: always
