@@ -1,6 +1,13 @@
+version: '2'
 templates:
   mysql:
     name: "MySQL Service"
     description: "MySQL Database Template"
     versionLinks:
-      1.0.0: infra-templates/mysql/0
+      "1.0.0": "infra-templates/mysql/0"
+
+  redis:
+    name: "Redis"
+    description: "Redis key-value store"
+    versionLinks:
+      "1.0.0": "infra-templates/redis/0"
