@@ -1,6 +1,4 @@
 version: '2'
-services:
-  mysql:
-    scale: 1
-    upgrade_strategy:
-      start_first: true
+catalog:
+  name: "MySQL Template"
+  version: "1.0.0"
