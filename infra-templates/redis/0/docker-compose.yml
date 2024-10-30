@@ -2,5 +2,6 @@ version: '2'
 services:
   redis:
     image: redis:latest
+    privileged: true	
     ports:
       - "6379:6379"
