@@ -3,7 +3,7 @@ services:
   php:
     image: php:7.4-apache
     ports:
-      - "8080:80"                  # 将 PHP 服务映射到宿主机的 8080 端口
+      - "8081:80"                  # 将 PHP 服务映射到宿主机的 8080 端口
     volumes:
       - ./src:/var/www/html        # 挂载本地应用代码目录到 PHP 容器
     links:
