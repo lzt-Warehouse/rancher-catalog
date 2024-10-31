@@ -1,0 +1,48 @@
+version: '2'
+services:
+  php:
+    image: php:7.4-apache
+    ports:
+      - "8080:80"                  # 将 PHP 服务映射到宿主机的 8080 端口
+    volumes:
+      - ./src:/var/www/html        # 挂载本地应用代码目录到 PHP 容器
+    links:
+      - mysql
+      - redis
+      - mq
+    environment:
+      - MYSQL_HOST=mysql
+      - MYSQL_USER=myuser
+      - MYSQL_PASSWORD=mypassword
+      - REDIS_HOST=redis
+      - MQ_HOST=mq
+
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:6
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  mq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"                # MQ 端口
+      - "15672:15672"              # RabbitMQ 管理界面
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
+    volumes:
+      - mq_data:/var/lib/rabbitmq
