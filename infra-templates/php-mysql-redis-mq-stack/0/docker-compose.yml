@@ -57,7 +57,15 @@ services:
       nofile:
         soft: 20000
         hard: 40000
-    
+    user: root  # 使用 root 用户启动
+    deploy:
+      resources:
+        pids_limit: 500  # 设置一个较大的值
+      limits:
+        cpus: "1.5"  # 增加容器的 CPU 配额
+      reservations:
+        cpus: "0.5"
+        
 volumes:
   mysql_data:
   redis_data:
