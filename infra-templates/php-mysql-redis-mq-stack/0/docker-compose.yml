@@ -38,6 +38,9 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    privileged: true
+    security_opt:
+      - seccomp=unconfined
 
   mq:
     image: rabbitmq:3-management
