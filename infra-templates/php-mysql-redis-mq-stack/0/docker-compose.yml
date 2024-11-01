@@ -30,6 +30,7 @@ services:
       - mysql_data:/var/lib/mysql
     ports:
       - "3306:3306"
+    command: --explicit_defaults_for_timestamp=true
 
   redis:
     image: redis:6
