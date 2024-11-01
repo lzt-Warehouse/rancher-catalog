@@ -52,6 +52,11 @@ services:
       RABBITMQ_DEFAULT_PASS: password
     volumes:
       - mq_data:/var/lib/rabbitmq
+    ulimits:
+      nproc: 65535
+      nofile:
+        soft: 20000
+        hard: 40000
     
 volumes:
   mysql_data:
